@@ -1,0 +1,217 @@
+:root {
+    --bg: #0D0D0D;
+    --text: #F2F2F2;
+    --subtext: #CFCFCF;
+
+    --blue: #4C6EF5;
+    --green: #38B2AC;
+    --purple: #5F3DC4;
+
+    --card: #1A1A1A;
+    --icon-blue: #4FD1C5;
+
+    --hover: #262626;
+    --line: #2E2E2E;
+
+    --poetsen: "Poetsen One", sans-serif;
+    --inter: "Inter", sans-serif;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    background-color: var(--bg);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    scroll-behavior: smooth;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* TOPO DA PÁGINA */
+
+.top {
+    background-color: var(--bg);
+    padding-top: 20px;
+    text-align: center;
+    color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.top hr {
+    width: 500px;
+}
+
+.top img {
+    height: 200px;
+}
+
+.discord {
+    color: var(--text);
+    text-decoration: none;
+    background-color: var(--blue);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.arrowDown {
+    animation: bounceDown 1.5s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* Primeira Section */
+
+.first {
+    padding-top: 100px;
+    background-color: #191919;
+    color: var(--icon-blue);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--poetsen);
+}
+
+.first h1 {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 40px;
+}
+
+.icons{
+    border: 2px solid var(--icon-blue);
+    border-radius: 30px;
+    height: 250px;
+    width: 250px;
+    background-color: var(--hover);
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* Segunda Section */
+
+.second {
+    padding-top: 100px;
+    background-color: #191919;
+    color: var(--purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--poetsen);
+}
+
+.second h1 {
+    text-align: left;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 40px;
+}
+
+.second p{
+    color: var(--subtext);
+    font-size: 16px;
+    text-align: center;
+}
+
+.talentos{
+    border-radius: 30px;
+    margin: 2%;
+    height: 320px;
+    width: 320px;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* Rodapé */
+
+footer{
+    margin-top: 5%;
+}
+
+ul, p{
+    color: white;
+}
+
+.left{
+    float: left;
+    padding-left: 10%;
+}
+
+.right{
+    float: right;
+    padding-right: 10%;
+}
+
+/*----------------------------------------------------------------------------------------------------------*/
+/* Ondas */
+
+.waves {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*-------------------------------------------------------------------------------------*/
